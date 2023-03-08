@@ -6,6 +6,11 @@ public class Round extends Figure implements Roundable {
     }
 
     @Override
+    public String getName() {
+        return "Имя изменено";
+    }
+
+    @Override
     public double getDiameter(double radius) {
         return Math.PI * Math.sqrt(radius);
     }

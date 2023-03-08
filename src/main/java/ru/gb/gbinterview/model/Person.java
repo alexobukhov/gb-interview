@@ -14,6 +14,17 @@ public class Person {
     private int age;
     private String gender;
 
+    public Person(String firstName, String lastName, String middleName, String country, String address, String phone, int age, String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.country = country;
+        this.address = address;
+        this.phone = phone;
+        this.age = age;
+        this.gender = gender;
+    }
+
     public static class Builder {
         private String firstName;
         private String lastName;
@@ -65,7 +76,8 @@ public class Person {
         }
 
         public Person build() {
-            return new Person();
+            Person person = new Person(firstName, lastName, middleName, country, address, phone, age, gender);
+            return person;
         }
     }
 }
